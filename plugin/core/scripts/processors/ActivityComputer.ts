@@ -565,7 +565,7 @@ export class ActivityComputer {
 
     protected heartRateData(userGender: string, userRestHr: number, userMaxHr: number, heartRateArray: number[], timeArray: number[], velocityArray: number[]): IHeartRateData {
 
-        if (_.isEmpty(heartRateArray) || _.isEmpty(timeArray)) {
+        if (_.isEmpty(heartRateArray) || _.isEmpty(timeArray) || this.activityType === "EBikeRide") {
             return null;
         }
 
